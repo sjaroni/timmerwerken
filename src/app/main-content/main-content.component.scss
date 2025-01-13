@@ -1,16 +1,66 @@
-@use '../../styles/_index.scss' as styles;
+@use "../../styles/_index.scss" as styles;
 
-main{
-  height: 800px;
-  background-color: yellow;
+main {
+  // .circle {
+  //   position: absolute;
+  //   bottom: 0;
+  //   right: 20vw;
+  //   width: 40vw;
+  //   height: 40vw;
+  //   background-color: #f59eb4;
+  //   border-radius: 50%;
+  // }
+
+  height: 2000px;
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scaleX(-1);
+  }
+
+  .rounded-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 430px;
+    background: rgba(46, 68, 147, 0.7);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .rounded-background svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+  }
 }
 
-.circle {
-  position: absolute;
-  bottom: 0;
-  right: 20vw;
-  width: 40vw;
-  height: 40vw;
-  background-color: #f59eb4;
-  border-radius: 50%;
+@media (min-width: 768px) {
+  .container{
+    height: 700px !important;
+  }
+
+  .rounded-background{
+    height: 730px !important;
+  }
+  
+  .rounded-background svg {
+    height: 150px !important;
+  }
 }

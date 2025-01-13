@@ -6,12 +6,12 @@ nav {
   height: 72px;
   width: 100%;
   max-width: 1440px;
-  z-index: 999;
+  z-index: 3;
   overflow: visible;
   position: absolute;
   top: 48px;
 
-  a{
+  a {
     text-decoration: none;
     color: #131a2f;
     .hover-underline {
@@ -19,18 +19,23 @@ nav {
     }
   }
 
-  #headline {
-    @include styles.dFlex(space-between, center, row, 0px);
+  #headline {    
+    @include styles.dFlex(space-between, center, column, 0px);
     width: 80%;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-flex;
     align-items: center;
   }
-  
-  h1, h4{
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h1,
+  h4 {
     margin-block-start: 0;
     margin-block-end: 0;
   }
@@ -42,18 +47,20 @@ nav {
     position: relative;
     bottom: -1px;
   }
-  
+
   .tight-spacing {
     display: inline-flex;
     align-items: center;
     margin-left: -0.35em;
     margin-right: -0.35em;
   }
-  
 }
 
-// @media (min-width: 768px) {
-//   #headline {        
-//     width: calc(100% - 200px) !important;
-//   }
-// }
+@media (min-width: 768px) {
+  #headline {
+    @include styles.dFlex(space-between, center, row !important, 0px);
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
