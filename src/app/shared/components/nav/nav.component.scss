@@ -1,26 +1,59 @@
 @use "../../../../styles/index" as styles;
 
 nav {
+  @include styles.dFlex(center, center, row, 0);
   background-color: #e5f3fa;
   height: 72px;
   width: 100%;
   max-width: 1440px;
   z-index: 999;
-  overflow: visible;  
+  overflow: visible;
   position: absolute;
-  top:48px;
+  top: 48px;
+
+  a{
+    text-decoration: none;
+    color: #131a2f;
+    .hover-underline {
+      @include styles.hover-underline(#131a2f, 3px, 0.4s);
+    }
+  }
+
+  #headline {
+    @include styles.dFlex(space-between, center, row, 0px);
+    width: 80%;
+  }
 
   h1 {
-    font-size: 2rem; /* Passe die Schriftgröße an */
-    display: inline-flex; /* Alternativ: inline-block */
-    align-items: center; /* Vertikale Ausrichtung von Text und Bild */
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
   }
   
-  .inline-image {
-    width: 1em; /* Passt die Bildbreite an die Schriftgröße an */
-    height: auto; /* Bewahrt das Seitenverhältnis des Bildes */
-    vertical-align: middle; /* Sorgt für eine bessere Ausrichtung mit dem Text */
+  h1, h4{
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
-  
 
+  .inline-image {
+    width: 0.7em;
+    height: auto;
+    vertical-align: middle;
+    position: relative;
+    bottom: -1px;
+  }
+  
+  .tight-spacing {
+    display: inline-flex;
+    align-items: center;
+    margin-left: -0.35em;
+    margin-right: -0.35em;
+  }
+  
 }
+
+// @media (min-width: 768px) {
+//   #headline {        
+//     width: calc(100% - 200px) !important;
+//   }
+// }
