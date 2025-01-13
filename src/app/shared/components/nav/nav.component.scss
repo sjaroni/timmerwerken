@@ -1,0 +1,14 @@
+@use '../../styles/_index.scss' as styles;
+
+nav{
+  @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
+  background-color: #e5f3fa;
+  color: #131a2f;
+  height: 120px;
+  width: 100%;
+  max-width: 1440px;
+  top: 0;
+  position: fixed;
+  z-index: 999;  
+  overflow: visible;
+}

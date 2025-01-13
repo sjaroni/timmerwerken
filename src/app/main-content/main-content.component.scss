@@ -1,0 +1,16 @@
+@use '../../styles/_index.scss' as styles;
+
+main{
+  height: 200px;
+  background-color: yellow;
+}
+
+.circle {
+  position: absolute;
+  bottom: 0;
+  right: 20vw;
+  width: 40vw;
+  height: 40vw;
+  background-color: #f59eb4;
+  border-radius: 50%;
+}
