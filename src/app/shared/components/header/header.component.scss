@@ -14,11 +14,40 @@ header {
 
   #headline {
     @include styles.dFlex(space-between, center, row, 0px);
-    width: calc(100% - 200px);
+    width: 80%;
 
     #contact {
       @include styles.dFlex(flex-start, center, row, 24px);
-      width: 200px;
+
+      .contact-icon {
+        @include styles.dFlex(center, center, row, 0px);
+        a {
+          @include styles.dFlex(center, center, row, 6px);
+          text-decoration: none;
+          color: #e5f3fa;
+          img {
+            height: 20px;
+          }
+
+          .mail-full {
+            display: none;
+          }
+        }
+      }
     }
+  }
+}
+
+.hover-underline {
+  @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
+}
+
+@media (min-width: 768px) {
+  #headline {
+    width: calc(100% - 200px);
+  }
+
+  .mail-full {
+    display: block !important;
   }
 }

@@ -1,14 +1,26 @@
-@use '../../styles/_index.scss' as styles;
+@use "../../../../styles/index" as styles;
 
-nav{
-  @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
+nav {
   background-color: #e5f3fa;
-  color: #131a2f;
-  height: 120px;
+  height: 72px;
   width: 100%;
   max-width: 1440px;
-  top: 0;
-  position: fixed;
-  z-index: 999;  
-  overflow: visible;
+  z-index: 999;
+  overflow: visible;  
+  position: absolute;
+  top:48px;
+
+  h1 {
+    font-size: 2rem; /* Passe die Schriftgröße an */
+    display: inline-flex; /* Alternativ: inline-block */
+    align-items: center; /* Vertikale Ausrichtung von Text und Bild */
+  }
+  
+  .inline-image {
+    width: 1em; /* Passt die Bildbreite an die Schriftgröße an */
+    height: auto; /* Bewahrt das Seitenverhältnis des Bildes */
+    vertical-align: middle; /* Sorgt für eine bessere Ausrichtung mit dem Text */
+  }
+  
+
 }
