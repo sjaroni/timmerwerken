@@ -13,7 +13,7 @@ header {
   overflow: visible;
 
   #headline {
-    @include styles.dFlex(space-between, center, row, 0px);    
+    @include styles.dFlex(space-between, center, row, 0px);
     width: 80%;
 
     #contact {
@@ -35,11 +35,11 @@ header {
         }
       }
     }
-    #location{
+    #location {
       display: none;
       .contact-icon {
         @include styles.dFlex(center, center, row, 6px);
-        img{
+        img {
           height: 20px;
         }
       }
@@ -55,13 +55,16 @@ header {
   #headline {
     width: calc(100% - 200px);
 
-    #location{
+    #location {
       display: flex !important;
     }
-
   }
 
   .mail-full {
     display: block !important;
+  }
+
+  .mail-short {
+    display: none;
   }
 }

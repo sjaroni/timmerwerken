@@ -1,0 +1,100 @@
+@use "../../../styles/_index.scss" as styles;
+
+h2,
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;  
+}
+
+h2{
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-shadow: 0 0 2px white;
+}
+
+h3{
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+
+  .textbox {
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 8px;
+    color: #e5f3fa;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.rounded-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background: rgba(46, 68, 147, 0.7);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.rounded-background svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+
+  h2{
+    font-size: 1.5em;
+  }
+
+  h3{
+    font-size: 2.2rem;
+  }
+
+  .container {
+    height: 700px !important;
+    .textbox{
+      width: 60%;
+      padding: 48px;
+      padding: 3rem;
+    }
+  }
+
+  .rounded-background {
+    height: 730px !important;
+  }
+
+  .rounded-background svg {
+    height: 150px !important;
+  }
+}
