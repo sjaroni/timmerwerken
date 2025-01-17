@@ -1,5 +1,73 @@
 @use "../../../../styles/index" as styles;
 
-footer{
+footer {
+  @include styles.dFlex(center, center, row, 0);
   background-color: #2e4493;
+  color: #e5f3fa;
+  height: 72px;
+  width: 100%;
+  max-width: 1440px;
+  bottom: 0;
+  position: fixed;
+  z-index: 999;
+  overflow: visible;
+
+  #content {
+    @include styles.dFlex(space-between, center, row, 0px);
+    width: 80%;
+
+    a {
+      text-decoration: none;
+      color: #e5f3fa;
+      .hover-underline {
+        @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
+      }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      display: inline-flex;
+      align-items: center;    
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    .inline-image {
+      width: 0.7em;
+      height: auto;
+      vertical-align: middle;
+      position: relative;
+      bottom: -1px;
+    }
+  
+    .tight-spacing {
+      display: inline-flex;
+      align-items: center;
+      margin-left: -0.35em;
+      margin-right: -0.35em;
+    }
+
+  }
+}
+
+.hover-underline {
+  @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
+}
+
+@media (min-width: 768px) {
+  #headline {
+    width: calc(100% - 200px);
+
+    #location {
+      display: flex !important;
+    }
+  }
+
+  .mail-full {
+    display: block !important;
+  }
+
+  .mail-short {
+    display: none;
+  }
 }
