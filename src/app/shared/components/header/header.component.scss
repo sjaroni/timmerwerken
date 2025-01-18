@@ -10,7 +10,9 @@ header {
   top: 0;
   position: fixed;
   z-index: 999;
-  overflow: visible;
+  overflow: visible;  
+  box-shadow: inset 0 -1px 0 0 #e5f3fa;
+
 
   #headline {
     @include styles.dFlex(space-between, center, row, 0px);

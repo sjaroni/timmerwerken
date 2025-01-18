@@ -1,5 +1,12 @@
 @use "../../../../styles/index" as styles;
 
+.horizontal-line {
+  border: none;
+  height: 1px;
+  background-color: white;
+  width: 100%;
+}
+
 footer {
   @include styles.dFlex(center, center, row, 0);
   background-color: #2e4493;
@@ -11,10 +18,19 @@ footer {
   position: fixed;
   z-index: 999;
   overflow: visible;
+  box-shadow: inset 0 1px 0 0 #e5f3fa;
 
   #content {
-    @include styles.dFlex(space-between, center, row, 0px);
+    @include styles.dFlex(space-between, center, column-reverse, 0px);
     width: 80%;
+
+    .company-logo {
+      display: none;
+    }
+
+    .copyright {
+      font-size: 0.67rem;
+    }
 
     a {
       text-decoration: none;
@@ -27,7 +43,7 @@ footer {
     h1 {
       font-size: 1.5rem;
       display: inline-flex;
-      align-items: center;    
+      align-items: center;
       margin-block-start: 0;
       margin-block-end: 0;
     }
@@ -39,14 +55,17 @@ footer {
       position: relative;
       bottom: -1px;
     }
-  
+
     .tight-spacing {
       display: inline-flex;
       align-items: center;
       margin-left: -0.35em;
       margin-right: -0.35em;
     }
+  }
 
+  .footer-right {
+    @include styles.dFlex(space-between, center, row, 16px);
   }
 }
 
@@ -55,19 +74,17 @@ footer {
 }
 
 @media (min-width: 768px) {
-  #headline {
+  #content {
     width: calc(100% - 200px);
+    flex-direction: row !important;
 
-    #location {
-      display: flex !important;
+    .company-logo {
+      display: unset !important;
+      width: 10%;
     }
-  }
 
-  .mail-full {
-    display: block !important;
-  }
-
-  .mail-short {
-    display: none;
+    .copyright {
+      font-size: 1rem !important;
+    }
   }
 }
