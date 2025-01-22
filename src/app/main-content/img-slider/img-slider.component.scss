@@ -1,0 +1,36 @@
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.image {
+  flex: 1 1 calc(25% - 16px); /* 4 Bilder pro Zeile bei ausreichend Platz */
+  max-width: calc(25% - 16px); /* Verhindert Überschreitungen */
+  height: auto; /* Beibehaltung des Seitenverhältnisses */  
+  border-radius: 8px;  
+  object-fit: cover; /* Kein Verzerren der Bilder */
+}
+
+@media (max-width: 1200px) {
+  .image {
+    flex: 1 1 calc(33.33% - 16px);
+    max-width: calc(33.33% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    flex: 1 1 90%;
+    max-width: 90%;
+  }
+}

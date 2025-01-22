@@ -1,0 +1,9 @@
+<div class="image-container">
+  <img
+    *ngFor="let image of images; let i = index"
+    class="image"
+    src="img/{{ image.name }}"
+    [alt]="image.caption"
+  />
+  <!-- <div class="caption">{{ image.caption }}</div> -->
+</div>
