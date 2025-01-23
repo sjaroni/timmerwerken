@@ -1,0 +1,40 @@
+@use "../../../../styles/index" as styles;
+
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-shadow: 0 0 2px white;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: normal;
+}
+
+.container {
+  @include styles.dFlex(flex-start, center, row, 16px);
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: pink;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: #e5f3fa;
+    @include styles.dFlex(flex-start, center, row, 0);
+
+    &:hover {
+      background-color: #2e4493;
+      border-radius: 50%;
+    }
+  }
+}

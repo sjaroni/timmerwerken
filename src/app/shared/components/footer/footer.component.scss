@@ -80,11 +80,17 @@ footer {
 
     .company-logo {
       display: unset !important;
-      width: 10%;
+      width: 15%;
     }
 
     .copyright {
       font-size: 1rem !important;
     }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 834px) and (orientation: portrait) {
+  #content{
+    width: 95% !important;
   }
 }

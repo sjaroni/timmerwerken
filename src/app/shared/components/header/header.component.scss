@@ -18,8 +18,9 @@ header {
     @include styles.dFlex(space-between, center, row, 0px);
     width: 80%;
 
-    #contact {
-      @include styles.dFlex(flex-start, center, row, 24px);
+    #contact {      
+      @include styles.dFlex(space-between, center, row, 24px);
+      width: 100%;
 
       .contact-icon {
         @include styles.dFlex(center, center, row, 0px);
@@ -31,7 +32,7 @@ header {
             height: 20px;
           }
 
-          .mail-full {
+          .mail-full, .phone-full {
             display: none;
           }
         }
@@ -53,20 +54,24 @@ header {
   @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 835px) {
   #headline {
     width: calc(100% - 200px);
+
+    #contact{
+      @include styles.dFlex(flex-start !important, center, row, 24px);
+    }
 
     #location {
       display: flex !important;
     }
   }
 
-  .mail-full {
+  .mail-full, .phone-full {
     display: block !important;
   }
 
-  .mail-short {
+  .mail-short, .phone-short {
     display: none;
   }
 }
