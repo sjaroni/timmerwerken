@@ -31,10 +31,11 @@ h3 {
     text-decoration: none;
     color: #e5f3fa;
     @include styles.dFlex(flex-start, center, row, 0);
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 50%;
 
     &:hover {
       background-color: #2e4493;
-      border-radius: 50%;
     }
   }
 }
