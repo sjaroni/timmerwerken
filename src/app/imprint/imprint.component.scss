@@ -6,4 +6,14 @@
 
 section{
   width: 80%;
+
+  a {  
+    text-decoration: none;
+    color: #11a2d7;
+  }
+  
+  .hover-underline {
+    @include styles.hover-underline(#11a2d7, 3px, 0.4s);
+  }
+
 }
