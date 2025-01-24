@@ -1,0 +1,11 @@
+@use "../../../../styles/index" as styles;
+
+
+a {  
+  text-decoration: none;
+  color: #131a2f;
+}
+
+.hover-underline {
+  @include styles.hover-underline(#131a2f, 3px, 0.4s);
+}

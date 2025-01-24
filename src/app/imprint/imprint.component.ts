@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { PageTitleComponent } from "../shared/components/page-title/page-title.component";
-import { DistanceAreaComponent } from "../shared/components/distance-area/distance-area.component";
+import { ContactComponent } from "../shared/components/contact/contact.component";
 
 @Component({
   selector: 'app-imprint',
-  imports: [PageTitleComponent, DistanceAreaComponent],
+  imports: [PageTitleComponent, ContactComponent],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
