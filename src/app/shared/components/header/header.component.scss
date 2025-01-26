@@ -2,23 +2,22 @@
 
 header {
   @include styles.dFlex(center, center, row, 0);
-  background-color: #2e4493;
-  color: #e5f3fa;
+  background-color: var(--primary-color);
+  color: var(--background-color);
   height: 48px;
   width: 100%;
   max-width: 1440px;
   top: 0;
   position: fixed;
   z-index: 999;
-  overflow: visible;  
-  box-shadow: inset 0 -1px 0 0 #e5f3fa;
-
+  overflow: visible;
+  box-shadow: inset 0 -1px 0 0 var(--background-color);
 
   #headline {
     @include styles.dFlex(space-between, center, row, 0px);
     width: 80%;
 
-    #contact {      
+    #contact {
       @include styles.dFlex(space-between, center, row, 24px);
       width: 100%;
 
@@ -27,12 +26,13 @@ header {
         a {
           @include styles.dFlex(center, center, row, 6px);
           text-decoration: none;
-          color: #e5f3fa;
+          color: var(--background-color);
           img {
             height: 20px;
           }
 
-          .mail-full, .phone-full {
+          .mail-full,
+          .phone-full {
             display: none;
           }
         }
@@ -51,14 +51,14 @@ header {
 }
 
 .hover-underline {
-  @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
+  @include styles.hover-underline(var(--background-color), 3px, 0.4s);
 }
 
 @media (min-width: 835px) {
   #headline {
     width: calc(100% - 200px);
 
-    #contact{
+    #contact {
       @include styles.dFlex(flex-start !important, center, row, 24px);
     }
 
@@ -67,11 +67,13 @@ header {
     }
   }
 
-  .mail-full, .phone-full {
+  .mail-full,
+  .phone-full {
     display: block !important;
   }
 
-  .mail-short, .phone-short {
+  .mail-short,
+  .phone-short {
     display: none;
   }
 }

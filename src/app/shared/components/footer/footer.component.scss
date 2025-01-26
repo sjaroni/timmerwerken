@@ -3,14 +3,14 @@
 .horizontal-line {
   border: none;
   height: 1px;
-  background-color: white;
+  background-color: var(--background-color);
   width: 100%;
 }
 
 footer {
   @include styles.dFlex(center, center, row, 0);
-  background-color: #2e4493;
-  color: #e5f3fa;
+  background-color: var(--primary-color);
+  color: var(--background-color);
   height: 72px;
   width: 100%;
   max-width: 1440px;
@@ -18,7 +18,7 @@ footer {
   position: fixed;
   z-index: 999;
   overflow: visible;
-  box-shadow: inset 0 1px 0 0 #e5f3fa;
+  box-shadow: inset 0 1px 0 0 var(--background-color);
 
   #content {
     @include styles.dFlex(space-between, center, column-reverse, 0px);
@@ -34,9 +34,9 @@ footer {
 
     a {
       text-decoration: none;
-      color: #e5f3fa;
+      color: var(--background-color);
       .hover-underline {
-        @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
+        @include styles.hover-underline(var(--background-color), 3px, 0.4s);
       }
     }
 
@@ -70,7 +70,7 @@ footer {
 }
 
 .hover-underline {
-  @include styles.hover-underline(#e5f3fa, 3px, 0.4s);
+  @include styles.hover-underline(var(--background-color), 3px, 0.4s);
 }
 
 @media (min-width: 768px) {

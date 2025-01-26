@@ -6,7 +6,7 @@
   gap: $g;
 }
 
-@mixin hover-underline($color: #e5f3fa, $height: 2px, $duration: 0.3s) {
+@mixin hover-underline($color: var(--background-color), $height: 2px, $duration: 0.3s) {
   position: relative;
   display: inline-block;
 

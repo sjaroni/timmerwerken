@@ -29,16 +29,16 @@ section {
       left: 0;
       margin: 0;
       padding: 16px;
-      color: #e5f3fa;
+      color: var(--background-color);
       font-size: .9rem;
     }
   }
   .dark {
-    background-color: #2e4493;
+    background-color: var(--primary-color);
   }
   
   .light {
-    background-color: #11a2d7;
+    background-color: var(--secondary-color);
   }
 }
 

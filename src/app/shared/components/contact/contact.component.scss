@@ -3,9 +3,9 @@
 
 a {  
   text-decoration: none;
-  color: #11a2d7;
+  color: var(--secondary-color);
 }
 
 .hover-underline {
-  @include styles.hover-underline(#11a2d7, 3px, 0.4s);
+  @include styles.hover-underline(var(--secondary-color), 3px, 0.4s);
 }

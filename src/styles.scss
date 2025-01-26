@@ -1,9 +1,15 @@
 @use './styles/_index.scss' as styles;
 
+:root{
+  --primary-color: #2e4493;
+  --secondary-color: #11a2d7;
+  --text-color: #131a2f;
+  --background-color: #e5f3fa;
+}
 
 html{
   overflow-x: hidden;  
-  background-color: #e5f3fa;
+  background-color: var(--background-color);
   scroll-behavior: smooth;
 }
 
@@ -11,8 +17,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
-  background-color: #e5f3fa;
-  color: #131a2f;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: "Poppins";  
   @include styles.dFlex(center, center, column, 0);
 }
@@ -52,7 +58,7 @@ body {
 
 *{
   scrollbar-width: thin;
-  scrollbar-color: #11a2d7 #131a2f;
+  scrollbar-color: var(--secondary-color) var(--background-color);
 }
 
 ::-webkit-scrollbar {
@@ -61,13 +67,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #11a2d7;
+  background-color: var(--secondary-color);
   border-radius: 2px;  
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #131a2f;
-  border: 1px solid #131a2f;
+  background-color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
 
